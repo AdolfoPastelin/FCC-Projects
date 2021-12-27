@@ -1,0 +1,33 @@
+@use "base/variables" as v;
+
+html {
+	font-size: 62.5%; //Enables that 1 rem = 10px
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit; //padding fix (polarish principal)
+}
+
+body {
+	font-size: 1.6rem;
+	background-color: v.$dark;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+	margin: 0 0 5rem 0;
+}
+
+.container {
+	width: 95%;
+	max-width: 140rem;
+	margin: 0 auto;
+}

@@ -1,0 +1,31 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.footer {
+	margin: 10rem auto 0 auto;
+	padding: 1.5rem;
+	text-align: right;
+	color: v.$white;
+	font-family: v.$secondaryFont;
+	background-color: lighten($color: v.$dark, $amount: 10);
+	font-size: 1.6rem;
+
+	@include m.tabletSize {
+		font-size: 1.8rem;
+	}
+
+	ul {
+		@include m.resetList();
+		display: flex;
+		justify-content: flex-end;
+		gap: 3rem;
+	}
+
+	a {
+		color: v.$white;
+	}
+
+	p {
+		margin: 1rem 0 0 0;
+	}
+}

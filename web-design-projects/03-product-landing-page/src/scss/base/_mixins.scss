@@ -1,0 +1,66 @@
+@use "variables" as v;
+
+@mixin phoneXSSize {
+	@media (min-width: v.$phoneXS) {
+		@content;
+	}
+}
+
+@mixin phoneSize {
+	@media (min-width: v.$phone) {
+		@content;
+	}
+}
+
+@mixin tabletSize {
+	@media (min-width: v.$tablet) {
+		@content;
+	}
+}
+
+@mixin desktopSize {
+	@media (min-width: v.$desktop) {
+		@content;
+	}
+}
+
+@mixin desktopXLSize {
+	@media (min-width: v.$desktopXL) {
+		@content;
+	}
+}
+
+@mixin desktopXXLSize {
+	@media (min-width: v.$desktopXXL) {
+		@content;
+	}
+}
+
+@mixin gridColumns($gridColumns: 2, $gap: 5rem) {
+	display: grid;
+	grid-template-columns: repeat($gridColumns, 1fr);
+	gap: $gap;
+}
+
+@mixin resetList {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+@mixin animateButton {
+	@keyframes buttonAnimation {
+		50% {
+			transform: translateY(0.3rem);
+		}
+		100% {
+			transform: translateY(0);
+		}
+	}
+}
+
+@mixin animateButtonHover {
+	cursor: pointer;
+	animation: buttonAnimation infinite 1s;
+	box-shadow: v.$boxShadow;
+}

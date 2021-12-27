@@ -1,0 +1,98 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+#header {
+	position: fixed;
+	top: 0;
+	background-color: lighten($color: v.$dark, $amount: 10);
+	width: 100%;
+	padding: 2rem;
+}
+
+.header-content {
+	display: flex;
+	flex-direction: column;
+
+	@include m.tabletSize {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.title {
+		margin: 0;
+		color: v.$white;
+		font-family: v.$titleFont;
+
+		@include m.phoneSize {
+			font-size: 4.2rem;
+			letter-spacing: 0.3rem;
+		}
+	}
+}
+
+.logo-container {
+	display: flex;
+	justify-content: center;
+
+	@include m.tabletSize {
+		align-items: center;
+		gap: 1rem;
+	}
+
+	#header-img {
+		margin-top: 0.3rem;
+		margin-right: 0.3rem;
+		width: 4rem;
+
+		@include m.phoneSize {
+			margin-right: 0.5rem;
+			width: 5rem;
+		}
+
+		@include m.tabletSize {
+			margin-top: 0.5rem;
+		}
+	}
+}
+
+#nav-bar {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	gap: 0.8rem;
+
+	@include m.tabletSize {
+		display: flex;
+		flex-direction: row;
+	}
+
+	a {
+		@include m.resetList();
+		font-family: v.$secondaryFont;
+		font-weight: 700;
+		font-size: 1.8rem;
+		color: v.$white;
+
+		@include m.phoneSize {
+			font-size: 2rem;
+		}
+
+		&:hover {
+			color: v.$orange;
+		}
+
+		&:last-child {
+			margin: 0;
+		}
+
+		@include m.tabletSize {
+			font-size: 2.2rem;
+			margin-right: 3rem;
+		}
+
+		@include m.desktopSize {
+			margin-right: 5rem;
+		}
+	}
+}

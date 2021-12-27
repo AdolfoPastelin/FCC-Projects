@@ -1,0 +1,74 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.get-started {
+	height: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	.get-started-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.get-started-title {
+		font-family: v.$secondaryFont;
+		font-weight: 900;
+		font-size: 4rem;
+		margin: 2.5rem;
+		color: v.$white;
+		text-align: center;
+
+		@include m.tabletSize {
+			font-size: 5rem;
+			margin: 2.5rem;
+		}
+	}
+
+	input[type="email"] {
+		font-family: v.$secondaryFont;
+		font-size: 1.8rem;
+		font-style: italic;
+		padding: 1rem 2rem;
+		margin-bottom: 2rem;
+		width: 60rem;
+		max-width: 100%;
+		border-radius: 0.7rem;
+
+		@include m.phoneXSSize {
+			max-width: 90%;
+		}
+
+		@include m.phoneSize {
+			max-width: 70%;
+		}
+
+		@include m.tabletSize {
+			max-width: 50%;
+		}
+
+		&:focus {
+			font-style: normal;
+		}
+	}
+
+	input[type="submit"] {
+		font-family: v.$getStartedFont;
+		padding: 1rem 2rem;
+		text-transform: uppercase;
+		font-size: 1.6rem;
+		font-weight: 900;
+		border-style: none;
+		border-radius: 0.7rem;
+		background-color: v.$orange;
+		@include m.animateButton;
+
+		&:hover {
+			@include m.animateButtonHover;
+		}
+	}
+}

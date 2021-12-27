@@ -1,0 +1,60 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.features-container {
+	height: 60rem;
+	width: 80rem;
+	max-width: 80%;
+	margin: 20rem auto 0 auto;
+
+	@include m.tabletSize {
+		margin: 15rem auto 10rem auto;
+	}
+}
+
+.features-list {
+	display: grid;
+	place-items: center;
+	grid-template-columns: 1fr 2fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	row-gap: 5rem;
+	margin: 20rem auto;
+
+	.icon svg {
+		color: v.$orange;
+		width: 12rem;
+
+		@include m.tabletSize {
+			width: 14rem;
+		}
+	}
+
+	.description {
+		place-self: stretch;
+		margin: auto 0;
+
+		h3 {
+			margin: 1rem 0;
+			color: v.$white;
+			font-family: v.$secondaryFont;
+			font-weight: 900;
+			font-size: 2.6rem;
+
+			@include m.tabletSize {
+				font-size: 3rem;
+			}
+		}
+
+		p {
+			margin: 0;
+			color: v.$white;
+			font-family: v.$secondaryFont;
+			font-weight: 300;
+			font-size: 1.5rem;
+
+			@include m.phoneSize {
+				font-size: 1.8rem;
+			}
+		}
+	}
+}
