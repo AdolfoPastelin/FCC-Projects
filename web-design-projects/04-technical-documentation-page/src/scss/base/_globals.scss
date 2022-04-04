@@ -1,0 +1,22 @@
+@use "base/variables" as v;
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	font-size: 1.6rem;
+	background-color: v.$darkColor;
+}
+
+h1 {
+	font-family: v.$titleFont;
+	color: v.$whiteColor;
+}
