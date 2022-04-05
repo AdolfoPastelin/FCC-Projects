@@ -1,0 +1,45 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.main-section {
+	padding: 2rem;
+
+	header {
+		font-family: v.$secondaryFont;
+		font-weight: 700;
+		font-size: 3.6rem;
+	}
+
+	p,
+	ul,
+	li {
+		font-family: v.$secondaryFont;
+		font-weight: 300;
+		font-size: 2.2rem;
+		line-height: 3rem;
+	}
+
+	ul,
+	li {
+		margin-bottom: 1.9rem;
+	}
+
+	code {
+		display: block;
+		text-align: left;
+		white-space: pre-line;
+		word-break: normal;
+		word-wrap: normal;
+		box-decoration-break: clone;
+		line-height: 2rem;
+		padding: 1.5rem;
+		margin: 1rem;
+		border-radius: 0.5rem;
+		background-color: v.$darkBackgroundColor;
+	}
+
+	.reference-link {
+		color: v.$yellowColor;
+		font-weight: 500;
+	}
+}

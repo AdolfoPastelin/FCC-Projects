@@ -1,0 +1,37 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.navbar-container {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+
+	@include m.desktopSize() {
+		height: 100%;
+		max-height: 100vh;
+		position: sticky;
+		top: 0;
+		overflow: scroll;
+	}
+
+	a {
+		color: v.$whiteColor;
+		text-decoration: none;
+		font-size: 2.4rem;
+		font-family: v.$secondaryFont;
+		font-weight: 900;
+		padding: 1.5rem;
+
+		&:nth-child(1n + 1) {
+			border-top: v.$lightBorder;
+		}
+
+		&:last-child {
+			border-bottom: none;
+		}
+
+		&:hover {
+			color: v.$yellowColor;
+		}
+	}
+}
