@@ -1,4 +1,24 @@
+@use "base/variables" as v;
+
 @mixin debug($color: red) {
 	border: 1px solid $color;
 	border-radius: 3px;
+}
+
+@mixin phoneSize {
+	@media (min-width: v.$phoneSize) {
+		@content;
+	}
+}
+
+@mixin tabletSize {
+	@media (min-width: v.$tabletSize) {
+		@content;
+	}
+}
+
+@mixin desktopSize {
+	@media (min-width: v.$desktopSize) {
+		@content;
+	}
 }

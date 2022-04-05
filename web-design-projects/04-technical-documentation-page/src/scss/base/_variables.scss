@@ -1,7 +1,17 @@
 // Fonts
-$titleFont: wellfleet, monospace;
+$titleFont: "Bebas Neue", cursive;
 $secondaryFont: "roboto", sans-serif;
 
 // Colors
 $darkColor: #191919;
+$yellowColor: #ff0;
 $whiteColor: #fff;
+$darkBackgroundColor: #333;
+
+// Screen sizes
+$phoneSize: 480px;
+$tabletSize: 768px;
+$desktopSize: 1250px;
+
+// Borders
+$lightBorder: 1px solid #ccc;
