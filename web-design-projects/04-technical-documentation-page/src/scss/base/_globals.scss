@@ -25,9 +25,19 @@ body {
 }
 
 h1 {
+	display: flex;
+	flex-direction: column;
 	font-family: v.$titleFont;
 	font-size: 5rem;
 	color: v.$yellowColor;
 	letter-spacing: 0.1rem;
-	margin: 1rem;
+	margin: 0;
+
+	@include m.tabletSize() {
+		display: block;
+	}
+
+	span {
+		color: v.$yellowColor;
+	}
 }
