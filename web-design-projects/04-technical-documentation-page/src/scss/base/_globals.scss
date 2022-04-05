@@ -1,4 +1,5 @@
 @use "base/variables" as v;
+@use "base/mixins" as m;
 
 html {
 	box-sizing: border-box;
@@ -14,9 +15,19 @@ html {
 body {
 	font-size: 1.6rem;
 	background-color: v.$darkColor;
+	color: v.$whiteColor;
+
+	@include m.desktopSize() {
+		display: grid;
+		grid-template-columns: 1fr 3fr;
+		gap: 3rem;
+	}
 }
 
 h1 {
 	font-family: v.$titleFont;
-	color: v.$whiteColor;
+	font-size: 5rem;
+	color: v.$yellowColor;
+	letter-spacing: 0.1rem;
+	margin: 1rem;
 }
