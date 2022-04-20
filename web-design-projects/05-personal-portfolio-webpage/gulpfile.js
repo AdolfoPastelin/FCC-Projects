@@ -10,8 +10,8 @@ const cssnano = require('cssnano')
 function css(done) {
 	src('src/scss/**/*.scss') //Identifies the .scss file to compile.
 		.pipe(sourcemaps.init())
-		.pipe(sass()) // Compile the file.
 		.pipe(plumber()) //Avoid gulp execution interruption when a compilation error ocurrs.
+		.pipe(sass()) // Compile the file.
 		.pipe(postcss([autoprefixer, cssnano()]))
 		.pipe(sourcemaps.write('.')) //Write the sourcemap file.
 		.pipe(dest('build/css')) // Stores the compiled files.
