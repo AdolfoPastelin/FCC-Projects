@@ -1,0 +1,29 @@
+@use "base/variables" as v;
+
+@mixin phoneSize() {
+	@media (min-width: v.$phone) {
+		@content;
+	}
+}
+
+@mixin tabletSize() {
+	@media (min-width: v.$tablet) {
+		@content;
+	}
+}
+
+@mixin desktopSize() {
+	@media (min-width: v.$desktop) {
+		@content;
+	}
+}
+
+@mixin largeSize() {
+	@media (min-width: v.$large) {
+		@content;
+	}
+}
+
+@mixin debug() {
+	border: 1px solid #f00;
+}
