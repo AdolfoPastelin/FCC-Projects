@@ -1,0 +1,22 @@
+@use "base/mixins" as m;
+@use "base/variables" as v;
+
+.footer {
+	background-color: v.$footerColor;
+
+	p {
+		display: block;
+		width: fit-content;
+		margin: 0 auto;
+		font-family: v.$secondaryFont;
+		font-size: 2rem;
+		color: v.$black;
+		padding: 3rem;
+		opacity: 0.6;
+		text-align: center;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+}

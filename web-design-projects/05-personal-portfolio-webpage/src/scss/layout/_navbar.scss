@@ -1,0 +1,41 @@
+@use "base/mixins" as m;
+@use "base/variables" as v;
+
+.navbar {
+	background-image: linear-gradient(to right, v.$navbarColor, v.$strongOrange);
+	border-bottom: 1px solid #44444424;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 100;
+}
+
+ul {
+	display: flex;
+	justify-content: center;
+	list-style: none;
+
+	@include m.tabletSize() {
+		justify-content: flex-start;
+	}
+
+	li {
+		font-family: v.$secondaryFont;
+		font-weight: 300;
+		padding: 2rem 0;
+
+		&:hover {
+			background-color: v.$strongOrange;
+			animation: grow 100ms ease-in;
+		}
+
+		a {
+			padding: 1.8rem 3.5rem;
+			color: v.$dark;
+			font-size: 2.5rem;
+			font-weight: 700;
+			text-transform: capitalize;
+			text-decoration: none;
+		}
+	}
+}
